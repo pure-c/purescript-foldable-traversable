@@ -6,7 +6,7 @@ PURS_FFI_FUNC_2(Data_FunctorWithIndex_mapWithIndexArray, f, _xs, {
   purs_vec_reserve(out, xs->length);
 
   for (int i = 0; i < xs->length; i++) {
-    out->data[i] = (purs_any_t *)purs_any_app(purs_any_app(f, PURS_ANY_INT_NEW(i)), xs->data[i]);
+    out->data[i] = purs_any_app(purs_any_app(f, PURS_ANY_INT_NEW(i)), xs->data[i]);
   }
   out->length = xs->length;
 
