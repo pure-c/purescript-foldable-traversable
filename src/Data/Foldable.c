@@ -7,7 +7,7 @@ PURS_FFI_FUNC_3(Data_Foldable_foldrArray, f, init, _xs, {
 		acc = (purs_any_t *)purs_any_app(purs_any_app(f, xs->data[i]), acc);
 	}
 	return acc;
-})
+});
 
 PURS_FFI_FUNC_3(Data_Foldable_foldlArray, f, init, _xs, {
 	purs_any_t * acc = (purs_any_t *)init;
@@ -16,4 +16,4 @@ PURS_FFI_FUNC_3(Data_Foldable_foldlArray, f, init, _xs, {
 		acc = (purs_any_t *)purs_any_app(purs_any_app(f, acc), xs->data[i]);
 	}
 	return acc;
-})
+});
