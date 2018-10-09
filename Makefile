@@ -1,7 +1,6 @@
 default: main
 .PHONY: default
 
-PUREC_DIR ?= ../pure-c
 include $(PUREC_DIR)/mk/target.mk
 
 SHELL := /bin/bash
