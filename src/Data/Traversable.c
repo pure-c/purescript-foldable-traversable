@@ -31,7 +31,7 @@ const purs_any_t * traversable_go(const purs_any_t * apply,
 				purs_any_array_new(purs_vec_new()));
 		case 1:
 			return purs_any_app(
-				purs_any_app(map, Data_Traversable_array1$),
+				purs_any_app(map, Data_Traversable_array1),
 				purs_any_app(f, array->data[bot]));
 		case 2:
 			return purs_any_app(
@@ -40,7 +40,7 @@ const purs_any_t * traversable_go(const purs_any_t * apply,
 					purs_any_app(
 						purs_any_app(
 							map,
-							Data_Traversable_array2$),
+							Data_Traversable_array2),
 						purs_any_app(f, array->data[bot]))),
 				purs_any_app(f, array->data[bot+1]));
 		case 3:
@@ -53,7 +53,7 @@ const purs_any_t * traversable_go(const purs_any_t * apply,
 							purs_any_app(
 								purs_any_app(
 									map,
-									Data_Traversable_array3$),
+									Data_Traversable_array3),
 								purs_any_app(f, array->data[bot]))),
 							purs_any_app(f, array->data[bot+1]))),
 				purs_any_app(f, array->data[bot+2]));
@@ -68,7 +68,7 @@ const purs_any_t * traversable_go(const purs_any_t * apply,
 					purs_any_app(
 						purs_any_app(
 							map,
-							Data_Traversable_concat2$),
+							Data_Traversable_concat2),
 						traversable_go(
 							apply,
 							map,
