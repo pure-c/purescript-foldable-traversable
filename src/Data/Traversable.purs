@@ -1,4 +1,5 @@
 module Data.Traversable
+
   ( class Traversable, traverse, sequence
   , traverseDefault, sequenceDefault
   , for

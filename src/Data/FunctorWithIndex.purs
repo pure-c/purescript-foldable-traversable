@@ -1,4 +1,6 @@
 module Data.FunctorWithIndex
+
+
   ( class FunctorWithIndex, mapWithIndex, mapDefault
   ) where
 
