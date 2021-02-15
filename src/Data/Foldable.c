@@ -6,9 +6,10 @@ PURS_FFI_FUNC_3(Data_Foldable_foldrArray, f, init, _xs) {
 	int acc_changed = 0;
 
 	acc = init;
+	PURS_ANY_RETAIN(acc);
 	xs = purs_any_force_array(_xs);
 
-	if (xs == NULL /* empty */) {
+	if (purs_vec_is_empty(xs)) {
 		return acc;
 	}
 
@@ -32,9 +33,10 @@ PURS_FFI_FUNC_3(Data_Foldable_foldlArray, f, init, _xs) {
 	int acc_changed = 0;
 
 	acc = init;
+	PURS_ANY_RETAIN(acc);
 	xs = purs_any_force_array(_xs);
 
-	if (xs == NULL /* empty */) {
+	if (purs_vec_is_empty(xs)) {
 		return acc;
 	}
 

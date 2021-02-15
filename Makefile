@@ -1,7 +1,7 @@
 default: main
 .PHONY: default
 
-CFLAGS = -g -O0
+CFLAGS = -O0 -g3
 
 include $(PUREC_DIR)/mk/target.mk
 
